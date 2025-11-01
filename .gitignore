@@ -138,7 +138,7 @@ merged_model_temp/
 
 # llama.cpp build directories (inside submodule)
 llamacpp-framework/build-*/
-MentaBench/llamacpp_framework.xcframework/
+Menta/llamacpp_framework.xcframework/
 
 # Training checkpoints and model weights
 checkpoint-*/

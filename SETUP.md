@@ -1,11 +1,11 @@
-# MentaBench Setup Guide
+# Menta Setup Guide
 
 ## Git Submodule 设置步骤
 
 ### 1. 初始化 Git 仓库
 
 ```bash
-cd /Users/ericx/Desktop/MentaBench
+cd /Users/ericx/Desktop/Menta
 git init
 ```
 
@@ -43,7 +43,7 @@ git commit -m "Initial commit with llama.cpp as submodule"
 
 ```bash
 # 创建 GitHub 仓库后，添加远程仓库
-git remote add origin https://github.com/YOUR_USERNAME/MentaBench.git
+git remote add origin https://github.com/YOUR_USERNAME/Menta.git
 git branch -M main
 git push -u origin main
 ```
@@ -69,11 +69,11 @@ cd llamacpp-framework
 
 ```bash
 # 克隆时包含 submodule
-git clone --recursive https://github.com/YOUR_USERNAME/MentaBench.git
+git clone --recursive https://github.com/YOUR_USERNAME/Menta.git
 
 # 或者先克隆再初始化 submodule
-git clone https://github.com/YOUR_USERNAME/MentaBench.git
-cd MentaBench
+git clone https://github.com/YOUR_USERNAME/Menta.git
+cd Menta
 git submodule update --init --recursive
 ```
 
@@ -87,7 +87,7 @@ git submodule update --init --recursive
 2. **Qwen3-4B 量化模型**: [下载链接]
 3. **Phi-4-mini 量化模型**: [下载链接]
 
-下载后将 `.gguf` 文件放入 `MentaBench/` 目录。
+下载后将 `.gguf` 文件放入 `Menta/` 目录。
 
 ---
 

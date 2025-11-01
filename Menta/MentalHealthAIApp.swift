@@ -1,6 +1,6 @@
 //
 //  MentalHealthAIApp.swift
-//  MentaBench
+//  Menta
 //
 //  Created by Tulika Awalgaonkar on 6/3/24.
 //

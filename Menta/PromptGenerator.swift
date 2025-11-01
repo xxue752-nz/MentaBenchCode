@@ -1,6 +1,6 @@
 //
 //  PromptGenerator.swift
-//  MentaBench
+//  Menta
 //
 //  Prompt variant generator - Based on Python implementation
 //  Provides multiple prompt variants to improve model generalization

@@ -1,6 +1,6 @@
 //
 //  PredictionParser.swift
-//  MentaBench
+//  Menta
 //
 //  Intelligent prediction parser - Optimized based on Python implementation
 //  Provides multi-layer fallback mechanism to ensure valid predictions

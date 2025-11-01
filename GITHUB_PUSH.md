@@ -26,7 +26,7 @@
 ### 1. 在 GitHub 上创建新仓库
 
 访问 https://github.com/new 创建仓库：
-- Repository name: `MentaBench`
+- Repository name: `Menta`
 - Description: "Mental health AI model evaluation on iOS using llama.cpp"
 - **不要**勾选 "Initialize this repository with a README"
 - Public 或 Private（根据需要）
@@ -34,10 +34,10 @@
 ### 2. 连接远程仓库并推送
 
 ```bash
-cd /Users/ericx/Desktop/MentaBench
+cd /Users/ericx/Desktop/Menta
 
 # 添加远程仓库（替换 YOUR_USERNAME）
-git remote add origin https://github.com/YOUR_USERNAME/MentaBench.git
+git remote add origin https://github.com/YOUR_USERNAME/Menta.git
 
 # 推送主分支
 git branch -M main
@@ -59,13 +59,13 @@ git push -u origin main
 以下文件/目录**不会**被推送到 GitHub：
 
 ### 模型文件（~7GB+）
-- `MentaBench/Menta.gguf`
-- `MentaBench/Phi-4-mini-instruct-Q4_K_M.gguf`
-- `MentaBench/qwen3-4b_Q4_K_M.gguf`
+- `Menta/Menta.gguf`
+- `Menta/Phi-4-mini-instruct-Q4_K_M.gguf`
+- `Menta/qwen3-4b_Q4_K_M.gguf`
 
 ### 编译产物
 - `llamacpp-framework/build-*/`
-- `MentaBench/llamacpp_framework.xcframework/`
+- `Menta/llamacpp_framework.xcframework/`
 
 ### 训练数据和检查点（~15GB+）
 - `Menta（trained-qwen3-4b-instruct-2507）/` 整个目录
@@ -103,8 +103,8 @@ huggingface-cli upload YOUR_USERNAME/mentabench-models Menta.gguf
 
 ```bash
 # 克隆包含 submodule
-git clone --recursive https://github.com/YOUR_USERNAME/MentaBench.git
-cd MentaBench
+git clone --recursive https://github.com/YOUR_USERNAME/Menta.git
+cd Menta
 
 # 构建 llama.cpp framework
 cd llamacpp-framework
@@ -112,10 +112,10 @@ cd llamacpp-framework
 cd ..
 
 # 下载模型文件（从你提供的链接）
-# 将 .gguf 文件放入 MentaBench/ 目录
+# 将 .gguf 文件放入 Menta/ 目录
 
 # 在 Xcode 中打开并运行
-open MentaBench.xcodeproj
+open Menta.xcodeproj
 ```
 
 ## ✅ 最佳实践检查清单

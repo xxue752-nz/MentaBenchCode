@@ -1,6 +1,6 @@
 //
 //  BatchProcessor.swift
-//  MentaBench
+//  Menta
 //
 //  Batch processing and memory management tools
 //  Optimized based on Python implementation

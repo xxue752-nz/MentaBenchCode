@@ -1,6 +1,6 @@
-# MentaBench - Mental Health AI Model Evaluation on iOS
+# Menta - Mental Health AI Model Evaluation on iOS
 
-MentaBench is an iOS benchmarking application for evaluating mental health classification models on mobile devices. The project benchmarks **Menta**, our custom-trained mental health model based on Qwen3-4B (fine-tuned via LoRA), against baseline models including Microsoft's Phi-4-mini (3.8B) and Alibaba's Qwen3-4B-Instruct-2507. The benchmark evaluates model performance across 6 mental health classification tasks: stress detection, depression detection and severity classification, suicide ideation detection, suicide risk assessment, and multi-level risk severity classification. All inference runs entirely on-device using llama.cpp with Metal GPU acceleration, providing comprehensive metrics including accuracy, latency (TTFT), throughput (ITPS/OTPS), memory usage, and CPU utilization. This platform enables direct comparison between specialized fine-tuned models and general-purpose language models for mental health applications.
+Menta is an iOS benchmarking application for evaluating mental health classification models on mobile devices. The project benchmarks **Menta**, our custom-trained mental health model based on Qwen3-4B (fine-tuned via LoRA), against baseline models including Microsoft's Phi-4-mini (3.8B) and Alibaba's Qwen3-4B-Instruct-2507. The benchmark evaluates model performance across 6 mental health classification tasks: stress detection, depression detection and severity classification, suicide ideation detection, suicide risk assessment, and multi-level risk severity classification. All inference runs entirely on-device using llama.cpp with Metal GPU acceleration, providing comprehensive metrics including accuracy, latency (TTFT), throughput (ITPS/OTPS), memory usage, and CPU utilization. This platform enables direct comparison between specialized fine-tuned models and general-purpose language models for mental health applications.
 
 ## Features
 
@@ -117,8 +117,8 @@ The app evaluates models on 6 key mental health classification tasks:
 ### 1. Clone the repository with submodules:
 ```bash
 # Clone with submodules (includes llama.cpp framework)
-git clone --recursive https://github.com/yourusername/MentaBench.git
-cd MentaBench
+git clone --recursive https://github.com/yourusername/Menta.git
+cd Menta
 
 # Or if you already cloned without --recursive:
 git submodule update --init --recursive
@@ -142,11 +142,11 @@ Due to file size limitations, model files are not included in the repository. Do
 - **Phi-4-mini-instruct-Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/microsoft/phi-4-mini)
 - **qwen3-4b_Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/Qwen/Qwen3-4B-Instruct)
 
-Place downloaded `.gguf` files in the `MentaBench/` directory.
+Place downloaded `.gguf` files in the `Menta/` directory.
 
 ### 4. Open and build the project:
 ```bash
-open MentaBench.xcodeproj
+open Menta.xcodeproj
 ```
 
 - Select your target device (iOS 16.0+)
@@ -154,7 +154,7 @@ open MentaBench.xcodeproj
 
 ## Usage
 
-1. **Launch the App**: Open MentaBench on your iOS device
+1. **Launch the App**: Open Menta on your iOS device
 
 2. **Select Model**: Choose an AI model from the dropdown menu
 
@@ -169,8 +169,8 @@ open MentaBench.xcodeproj
 ## Project Structure
 
 ```
-MentaBench/
-├── MentaBench/
+Menta/
+├── Menta/
 │   ├── MentalHealthAIApp.swift    # App entry point
 │   ├── ContentView.swift          # Main UI
 │   ├── LlamaState.swift           # Model state management and evaluation logic
@@ -231,11 +231,11 @@ All datasets are included in the app bundle:
 If you use this work in your research, please cite:
 
 ```bibtex
-@software{mentabench2025,
-  title={MentaBench: Mental Health AI Model Evaluation on iOS},
+@software{menta2025,
+  title={Menta: Mental Health AI Model Evaluation on iOS},
   author={Your Name},
   year={2025},
-  url={https://github.com/yourusername/MentaBench}
+  url={https://github.com/yourusername/Menta}
 }
 ```
 

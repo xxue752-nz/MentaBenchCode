@@ -1,6 +1,6 @@
-# MentaBench - Requirements and Dependencies
+# Menta - Requirements and Dependencies
 
-This document outlines the system requirements, dependencies, and prerequisites for building and running MentaBench.
+This document outlines the system requirements, dependencies, and prerequisites for building and running Menta.
 
 ## System Requirements
 
@@ -68,7 +68,7 @@ All dependencies are bundled with the project:
 
 ### Required Model Files (GGUF format)
 
-All model files should be placed in the `MentaBench/` directory:
+All model files should be placed in the `Menta/` directory:
 
 #### 1. Menta (Primary Model - Custom-Trained)
 ```
@@ -137,7 +137,7 @@ python3 llamacpp-framework/convert_hf_to_gguf.py \
 
 ### Required Datasets
 
-All datasets should be in `MentaBench/datasets/dataset/`:
+All datasets should be in `Menta/datasets/dataset/`:
 
 #### 1. Dreaddit Stress Analysis
 ```
@@ -181,7 +181,7 @@ Tasks:
 
 #### Project Settings
 ```
-Bundle Identifier: com.yourcompany.MentaBench
+Bundle Identifier: com.yourcompany.Menta
 Deployment Target: iOS 16.0
 Swift Version: 5.9 or later
 Optimization Level: -O (Release), -Onone (Debug)
@@ -249,25 +249,25 @@ Batch Size: 512 - 2048 tokens (adaptive)
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/MentaBench.git
-cd MentaBench
+git clone https://github.com/yourusername/Menta.git
+cd Menta
 ```
 
 ### 2. Verify Model Files
 ```bash
-ls -lh MentaBench/*.gguf
+ls -lh Menta/*.gguf
 # Should show 5 model files
 ```
 
 ### 3. Verify Dataset Files
 ```bash
-ls -lh MentaBench/datasets/dataset/*.csv
+ls -lh Menta/datasets/dataset/*.csv
 # Should show 4 CSV files
 ```
 
 ### 4. Open in Xcode
 ```bash
-open MentaBench.xcodeproj
+open Menta.xcodeproj
 ```
 
 ### 5. Configure Signing

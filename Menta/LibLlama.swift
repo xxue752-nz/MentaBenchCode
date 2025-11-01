@@ -1,6 +1,6 @@
 //
 //  LibLlama.swift
-//  MentaBench
+//  Menta
 //
 //  Created by Tulika Awalgaonkar on 4/10/24.
 //
