@@ -10,7 +10,7 @@
 
 ## Overview
 
-Menta is an optimized small language model fine-tuned for multi-task mental-health prediction from social media. Trained with a LoRA-based, cross-dataset regimen and a balanced-accuracy-oriented loss across six classification tasks, it outperforms nine state-of-the-art SLM baselines, delivering a mean +15.2% gain over the best non-fine-tuned SLM and surpassing 13B-parameter LLMs on depression and stress while being ~3.25× smaller. It also runs in real time on an iPhone 15 Pro Max using ~3 GB RAM, enabling scalable, privacy-preserving, on-device mental-health monitoring.
+Menta is an optimized small language model for multi task mental health prediction from social media. It is trained with a LoRA based cross dataset regimen and a balanced accuracy oriented objective across six classification tasks. Compared with nine state of the art small language model baselines, Menta delivers an average improvement of 15.2 percent over the best SLM without fine tuning and it surpasses 13B parameter large language models on depression and stress while remaining about 3.25 times smaller. We also demonstrate real time on device inference on an iPhone 15 Pro Max that uses about 3 GB of RAM, enabling scalable and privacy preserving mental health monitoring.
 
 ### Key Features
 
