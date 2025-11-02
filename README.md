@@ -1,4 +1,4 @@
-# Menta: On-Device Mental Health Monitoring System
+# Menta: A Small Language Model for On-Device Mental Health Prediction
 
 <div align="center">
 
@@ -8,17 +8,17 @@
 
 </div>
 
-## 📋 Overview
+## Overview
 
-Menta is an innovative on-device mental health monitoring system that leverages Small Language Models (SLMs) to analyze social media content for mental health indicators, including depression, stress, and suicidal ideation. The system operates entirely on-device to ensure user privacy and data security.
+Menta is an optimized small language model fine-tuned for multi-task mental-health prediction from social media. Trained with a LoRA-based, cross-dataset regimen and a balanced-accuracy-oriented loss across six classification tasks, it outperforms nine state-of-the-art SLM baselines, delivering a mean +15.2% gain over the best non-fine-tuned SLM and surpassing 13B-parameter LLMs on depression and stress while being ~3.25× smaller. It also runs in real time on an iPhone 15 Pro Max using ~3 GB RAM, enabling scalable, privacy-preserving, on-device mental-health monitoring.
 
 ### Key Features
 
-- 🔒 **Privacy-First**: All processing happens on-device, no data leaves your device
-- 📱 **Mobile-Optimized**: Designed specifically for iOS devices with efficient resource usage
-- 🧠 **Multi-Dimensional Analysis**: Evaluates depression, stress, and suicidal thoughts
-- ⚡ **Real-Time Monitoring**: Provides immediate in-situ predictions
-- 🎯 **High Accuracy**: Fine-tuned SLMs for mental health assessment tasks
+- **Privacy-First**: All processing happens on-device, no data leaves your device
+- **Mobile-Optimized**: Designed specifically for iOS devices with efficient resource usage
+-**Multi-Dimensional Analysis**: Evaluates depression, stress, and suicidal thoughts
+-**Real-Time Monitoring**: Provides immediate in-situ predictions
+- **High Accuracy**: Fine-tuned SLMs for mental health assessment tasks
 
 ## 🗂️ Project Structure
 
