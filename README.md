@@ -71,7 +71,7 @@ This folder contains all the code and datasets for training and fine-tuning the 
 - Weighted loss functions for balanced learning
 - Log probability analysis for confidence estimation
 
-##Quick Start
+## Quick Start
 
 ### For Model Deployment (iOS)
 
