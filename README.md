@@ -1,272 +1,199 @@
-# Menta - Mental Health AI Model Evaluation on iOS
+# Menta: On-Device Mental Health Monitoring System
 
-Menta is an iOS benchmarking application for evaluating mental health classification models on mobile devices. The project benchmarks **Menta**, our custom-trained mental health model based on Qwen3-4B (fine-tuned via LoRA), against baseline models including Microsoft's Phi-4-mini (3.8B) and Alibaba's Qwen3-4B-Instruct-2507. The benchmark evaluates model performance across 6 mental health classification tasks: stress detection, depression detection and severity classification, suicide ideation detection, suicide risk assessment, and multi-level risk severity classification. All inference runs entirely on-device using llama.cpp with Metal GPU acceleration, providing comprehensive metrics including accuracy, latency (TTFT), throughput (ITPS/OTPS), memory usage, and CPU utilization. This platform enables direct comparison between specialized fine-tuned models and general-purpose language models for mental health applications.
+<div align="center">
 
-## Features
+![Menta Workflow](images/workflow.png)
 
-- **On-Device AI Inference**: Run state-of-the-art language models entirely on your iOS device
-- **Multiple Task Support**: Evaluate models across 6 different mental health classification tasks
-- **Model Comparison**: Compare performance across multiple models including:
-  - Menta (Fine-tuned mental health model)
-  - Phi-4-mini
-  - Qwen3-4B-Instruct
-  - StableSLM-3B
-  - Falcon-1.3B
-- **Performance Metrics**: Comprehensive metrics including:
-  - Accuracy
-  - Time-to-First-Token (TTFT)
-  - Input/Output Tokens Per Second (ITPS/OTPS)
-  - Output Evaluation Time (OET)
-  - Memory Usage
-  - CPU Usage
-- **Batch Processing**: Efficient batch processing with automatic memory management
-- **Real-time Monitoring**: Track evaluation progress in real-time
+**Privacy-Preserving Mental Health Assessment Using Small Language Models on Mobile Devices**
 
-## Mental Health Classification Tasks
+</div>
 
-The app evaluates models on 6 key mental health classification tasks:
+## 📋 Overview
 
-### 1. Stress Detection (Binary)
-- **Dataset**: Dreaddit Stress Analysis
-- **Classes**: Stressed (1) vs. Not Stressed (0)
-- **Description**: Identifies stress indicators in social media posts
+Menta is an innovative on-device mental health monitoring system that leverages Small Language Models (SLMs) to analyze social media content for mental health indicators, including depression, stress, and suicidal ideation. The system operates entirely on-device to ensure user privacy and data security.
 
-### 2. Depression Detection (Binary)
-- **Dataset**: Reddit Depression Dataset
-- **Classes**: Depressed (1) vs. Not Depressed (0)
-- **Description**: Detects presence of depression symptoms
+### Key Features
 
-### 3. Depression Severity (4-Level)
-- **Dataset**: Reddit Depression Dataset
-- **Classes**: Minimal (0), Mild (1), Moderate (2), Severe (3)
-- **Description**: Classifies depression severity levels
+- 🔒 **Privacy-First**: All processing happens on-device, no data leaves your device
+- 📱 **Mobile-Optimized**: Designed specifically for iOS devices with efficient resource usage
+- 🧠 **Multi-Dimensional Analysis**: Evaluates depression, stress, and suicidal thoughts
+- ⚡ **Real-Time Monitoring**: Provides immediate in-situ predictions
+- 🎯 **High Accuracy**: Fine-tuned SLMs for mental health assessment tasks
 
-### 4. Suicide Ideation (Binary)
-- **Dataset**: SDCNL
-- **Classes**: Ideation Present (1) vs. Not Present (0)
-- **Description**: Identifies suicidal thoughts and ideation
+## 🗂️ Project Structure
 
-### 5. Suicide Risk (Binary)
-- **Dataset**: Reddit User Posts
-- **Classes**: High Risk (1) vs. Low Risk (0)
-- **Description**: Assesses overall suicide risk level
+This repository contains two main components:
 
-### 6. Suicide Risk Severity (5-Level)
-- **Dataset**: Reddit User Posts
-- **Classes**: Supportive (1), Indicator (2), Ideation (3), Behavior (4), Attempt (5)
-- **Description**: Classifies suicide risk into detailed severity levels
+### 1. [`Menta_deployment/`](./Menta_deployment) - Mobile Application & Model Deployment
 
-## Models
+This folder contains the iOS application for deploying the mental health monitoring model on mobile devices.
 
-### Menta (Primary Benchmark Model)
-**Our custom-trained mental health model** - A specialized model fine-tuned for mental health classification tasks.
+**Contents:**
+- **Menta/**: SwiftUI-based iOS application
+  - Mental health prediction interface
+  - Real-time social media post analysis
+  - Privacy-preserving data handling
+  - Batch processing capabilities
+- **llamacpp-framework/**: llama.cpp framework compiled for iOS
+  - Optimized for Apple Silicon and ARM devices
+  - XCFramework for multi-platform support (iOS, tvOS, visionOS)
+  - Pre-built binaries for quick integration
+- **Menta.xcodeproj/**: Xcode project configuration
 
-- **Base Model**: Qwen3-4B
-- **Parameters**: ~4B
-- **Training**: LoRA fine-tuning on mental health datasets
-- **Specialty**: Optimized for the 6 mental health classification tasks in this benchmark
-- **Format**: F32 (Full precision, 2.3GB)
-- **File**: `Menta.gguf`
-- **Description**: This is the primary model developed and trained specifically for mental health text classification. It has been fine-tuned to understand nuanced mental health language patterns including stress indicators, depression symptoms, and suicide risk factors across various severity levels.
+**Key Features:**
+- On-device AI screening
+- Lightweight storage with no cloud dependency
+- Real-time mental health report generation
+- Resource monitoring (CPU, RAM, battery)
+- Safety alert system for high-risk cases
 
-### Phi-4-mini (Baseline Comparison)
-**Microsoft's efficient reasoning model** - A compact yet powerful language model.
+### 2. [`Menta_pretraining_code/`](./Menta_pretraining_code) - Model Training & Fine-tuning
 
-- **Developer**: Microsoft Research
-- **Parameters**: 3.8B
-- **Architecture**: Transformer-based decoder
-- **Specialty**: Strong reasoning capabilities and instruction following
-- **Format**: Q4_K_M quantization (2.3GB)
-- **File**: `Phi-4-mini-instruct-Q4_K_M.gguf`
-- **Description**: The Phi-4-mini is Microsoft's latest compact language model designed for efficient deployment on edge devices. Despite its smaller size, it demonstrates impressive reasoning abilities and serves as an excellent baseline for comparing against specialized models.
+This folder contains all the code and datasets for training and fine-tuning the Menta model.
 
-### Qwen3-4B-Instruct (Baseline Comparison)
-**Alibaba's multilingual instruction model** - Version 2507 (July 2025 release).
+**Contents:**
+- **Training Scripts**:
+  - `Menta_lora_multitask_weighted_optimized.py`: Multi-task learning with LoRA fine-tuning
+  - `Menta_lora_config1_logprob.py`: LoRA configuration with log probability implementation
+  - `improved_logprob_implementation.py`: Enhanced log probability calculations
+- **Datasets**:
+  - Reddit depression dataset
+  - Stress analysis dataset (Dreaddit)
+  - Suicidal ideation dataset (SDCNL)
+  - Multi-user mental health posts
+- **Configuration**:
+  - `config.yaml`: Training hyperparameters and model settings
+  - `requirements.txt`: Python dependencies
 
-- **Developer**: Alibaba Cloud (Qwen Team)
-- **Parameters**: 4B
-- **Version**: Qwen3-4B-Instruct-2507
-- **Specialty**: Excellent instruction following, multilingual support, and general reasoning
-- **Format**: Q4_K_M quantization (2.3GB)
-- **File**: `qwen3-4b_Q4_K_M.gguf`
-- **Description**: Qwen3-4B-Instruct is the base model for our Menta fine-tune. This instruction-tuned version provides strong baseline performance across diverse tasks. The 2507 version includes improvements in instruction following and contextual understanding.
+**Training Approach:**
+- Multi-task learning for depression, stress, and suicidal ideation detection
+- LoRA (Low-Rank Adaptation) for efficient fine-tuning
+- Weighted loss functions for balanced learning
+- Log probability analysis for confidence estimation
 
+## 🚀 Quick Start
 
----
+### For Model Deployment (iOS)
 
-### Model Comparison Summary
-
-| Model | Parameters | Specialty | Format | Size | Purpose |
-|-------|-----------|-----------|---------|------|---------|
-| **Menta** | 4B | Mental Health Fine-tuned | F32 | 2.3GB | Primary evaluation target |
-| **Phi-4-mini** | 3.8B | General reasoning | Q4_K_M | 2.3GB | General-purpose baseline |
-| **Qwen3-4B-Instruct** | 4B | Instruction following | Q4_K_M | 2.3GB | Base model baseline |
-| StableSLM-3B | 3B | Efficient inference | F16 | 5.2GB | Additional comparison |
-| Falcon-1.3B | 1.3B | Edge deployment | Q8_0 | Variable | Additional comparison |
-
-## Requirements
-
-- iOS 16.0 or later
-- Xcode 15.0 or later
-- iPhone with Apple Silicon (A14 Bionic or later recommended)
-- At least 4GB of available storage for model files
-- Minimum 4GB RAM recommended
-
-## Installation
-
-### 1. Clone the repository with submodules:
+1. Navigate to the deployment folder:
 ```bash
-# Clone with submodules (includes llama.cpp framework)
-git clone --recursive https://github.com/yourusername/Menta.git
-cd Menta
-
-# Or if you already cloned without --recursive:
-git submodule update --init --recursive
+cd Menta_deployment
 ```
 
-### 2. Build llama.cpp framework:
-```bash
-cd llamacpp-framework
-./build-xcframework.sh
-cd ..
-```
-
-This will generate the `llamacpp_framework.xcframework` needed for the project.
-
-### 3. Download model files:
-
-Due to file size limitations, model files are not included in the repository. Download them separately:
-
-**Required Models:**
-- **Menta.gguf** (~2.3GB) - [Download Link](https://your-hosting-service/Menta.gguf)
-- **Phi-4-mini-instruct-Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/microsoft/phi-4-mini)
-- **qwen3-4b_Q4_K_M.gguf** (~2.3GB) - [Download from Hugging Face](https://huggingface.co/Qwen/Qwen3-4B-Instruct)
-
-Place downloaded `.gguf` files in the `Menta/` directory.
-
-### 4. Open and build the project:
+2. Open the Xcode project:
 ```bash
 open Menta.xcodeproj
 ```
 
-- Select your target device (iOS 16.0+)
-- Press Cmd+R to build and run
+3. Build and run on your iOS device or simulator
 
-## Usage
+For detailed deployment instructions, see [`Menta_deployment/SETUP.md`](./Menta_deployment/SETUP.md)
 
-1. **Launch the App**: Open Menta on your iOS device
+### For Model Training
 
-2. **Select Model**: Choose an AI model from the dropdown menu
-
-3. **Choose Task**: Select one of the 6 mental health classification tasks
-
-4. **Set Sample Count**: Choose how many samples to evaluate (10, 50, 100, 500, 1000, 2000, 3000)
-
-5. **Start Evaluation**: Tap "Start Evaluation" to begin the benchmark
-
-6. **View Results**: Monitor real-time progress and view comprehensive metrics upon completion
-
-## Project Structure
-
-```
-Menta/
-├── Menta/
-│   ├── MentalHealthAIApp.swift    # App entry point
-│   ├── ContentView.swift          # Main UI
-│   ├── LlamaState.swift           # Model state management and evaluation logic
-│   ├── LibLlama.swift             # llama.cpp Swift wrapper
-│   ├── Tasks.swift                # Task definitions and configurations
-│   ├── PromptGenerator.swift     # Prompt template generation
-│   ├── PredictionParser.swift    # Intelligent response parsing
-│   ├── BatchProcessor.swift      # Batch processing and memory management
-│   ├── DatasetLoader.swift       # Dataset loading utilities
-│   └── utils.swift                # Helper utilities
-├── llamacpp-framework/            # llama.cpp submodule (Git Submodule)
-├── datasets/                      # Mental health datasets
-└── SETUP.md                       # Detailed setup instructions
+1. Navigate to the training folder:
+```bash
+cd Menta_pretraining_code
 ```
 
-## Performance Metrics
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-The app provides detailed performance metrics for each evaluation:
+3. Configure training parameters in `config.yaml`
 
-- **Accuracy**: Percentage of correct predictions
-- **TTFT** (Time-to-First-Token): Latency before first token generation
-- **ITPS** (Input Tokens Per Second): Input processing speed
-- **OTPS** (Output Tokens Per Second): Generation speed
-- **OET** (Output Evaluation Time): Average time per sample
-- **Memory Usage**: RAM consumption (total and model-specific)
-- **CPU Usage**: Processor utilization during inference
-- **OOM Statistics**: Out-of-memory error tracking
+4. Start training:
+```bash
+python Menta_lora_multitask_weighted_optimized.py
+```
 
-## Technical Details
+For detailed training instructions, see [`Menta_pretraining_code/README.md`](./Menta_pretraining_code/README.md)
 
-### Optimization Techniques
+## 🔬 How It Works
 
-- **GPU Acceleration**: Leverages Metal GPU for accelerated inference
-- **Batch Processing**: Processes samples in configurable batches
-- **Memory Management**: Automatic memory cleanup to prevent OOM errors
-- **Context Window Optimization**: Adaptive context sizing based on model type
-- **Token Sampling**: Optimized sampling with temperature, top-p, and top-k
+The Menta system follows a comprehensive workflow:
 
-### Prompt Engineering
+1. **User Browsing**: Monitors social media interactions where mental health states may manifest
+2. **Data Cache**: Stores data locally with lightweight, privacy-preserving storage
+3. **Social Media Post Monitoring**: 
+   - Applies on-device AI screening
+   - Adheres to privacy and data minimization principles
+   - Identifies suicidal ideation and other mental health indicators
+4. **In-situ Prediction**: Generates multi-dimensional mental health reports including:
+   - Risk level assessment
+   - Depression indicators
+   - Stress levels
+   - Suicidal thought detection
+   - Confidence scores
+5. **Log Saving**: Records metadata, system logs, and resource usage for performance monitoring
 
-The app uses carefully crafted prompts for each task:
-- Detailed task-specific instructions
-- Clear classification criteria with examples
-- Consistent formatting across all tasks
-- Model-specific prompt templates (Qwen3 vs. Phi-4 formats)
+## 🛡️ Privacy & Security
 
-## Dataset Information
+- **100% On-Device Processing**: No data transmitted to external servers
+- **Data Minimization**: Only essential data is temporarily cached locally
+- **No Cloud Storage**: All processing and storage occurs on the user's device
+- **Privacy by Design**: Built with privacy as the core principle
 
-All datasets are included in the app bundle:
+## 📊 Performance
 
-- **Dreaddit**: Stress analysis from Reddit posts
-- **Reddit Depression**: Depression classification dataset
-- **SDCNL**: Suicide ideation detection
-- **Reddit User Posts**: Multi-level suicide risk assessment
+The system is optimized for mobile devices with:
+- Efficient CPU and RAM usage
+- Low battery consumption
+- Fast inference times
+- Real-time prediction capabilities
 
-## Citation
+## 🔧 Technical Stack
 
-If you use this work in your research, please cite:
+### Deployment
+- **Language**: Swift, SwiftUI
+- **Platform**: iOS 15.0+
+- **ML Framework**: llama.cpp (C++ inference)
+- **Model Format**: GGUF (quantized models)
+
+### Training
+- **Language**: Python 3.8+
+- **Frameworks**: PyTorch, Transformers
+- **Techniques**: LoRA fine-tuning, multi-task learning
+- **Base Models**: Small Language Models (SLMs)
+
+## 📝 Citation
+
+If you use Menta in your research, please cite:
 
 ```bibtex
-@software{menta2025,
-  title={Menta: Mental Health AI Model Evaluation on iOS},
-  author={Your Name},
-  year={2025},
-  url={https://github.com/yourusername/Menta}
+@software{menta2024,
+  title={Menta: On-Device Mental Health Monitoring with Small Language Models},
+  author={Your Team},
+  year={2024},
+  url={https://github.com/xxue752-nz/Menta}
 }
 ```
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the terms specified in the [LICENSE](./LICENSE) file.
 
-## Acknowledgments
+## 🤝 Contributing
 
-- Built on [llama.cpp](https://github.com/ggerganov/llama.cpp) for efficient LLM inference
-- Uses models from Alibaba (Qwen), Microsoft (Phi), Stability AI, and TII (Falcon)
-- Mental health datasets from various research projects
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
-## Contributing
+## ⚠️ Disclaimer
 
-Contributions are welcome! Please feel free to submit pull requests or open issues for:
-- Bug fixes
-- New features
-- Additional models
-- Performance improvements
-- Documentation enhancements
+Menta is a research tool and should not be used as a substitute for professional mental health diagnosis or treatment. If you or someone you know is experiencing mental health issues or suicidal thoughts, please contact a mental health professional or crisis helpline immediately.
 
-## Disclaimer
+**Crisis Resources:**
+- National Suicide Prevention Lifeline (US): 1-800-273-8255
+- Crisis Text Line (US): Text HOME to 741741
+- International Association for Suicide Prevention: https://www.iasp.info/resources/Crisis_Centres/
 
-This application is for research and benchmarking purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of qualified health providers with any questions regarding mental health conditions.
+## 📧 Contact
 
-## Contact
-
-For questions or feedback, please open an issue on GitHub or contact [your email].
+For questions, issues, or collaborations, please open an issue on GitHub or contact the maintainers.
 
 ---
 
-**Note**: This is a research project focused on evaluating AI model performance for mental health tasks on mobile devices. The models and evaluations are intended for academic and research purposes.
+<div align="center">
+Made with ❤️ for mental health awareness and privacy-preserving AI
+</div>
 
