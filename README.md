@@ -20,7 +20,7 @@ Menta is an optimized small language model for multi task mental health predicti
 -**Real-Time Monitoring**: Provides immediate in-situ predictions
 - **High Accuracy**: Fine-tuned SLMs for mental health assessment tasks
 
-##Project Structure
+## Project Structure
 
 This repository contains two main components:
 
