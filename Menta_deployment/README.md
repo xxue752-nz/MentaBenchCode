@@ -1,8 +1,7 @@
-# Menta - Mental Health AI Model Evaluation on iOS
+# Menta: A Small Language Model for On-Device Mental Health Prediction
 
-Menta is an iOS benchmarking application for evaluating mental health classification models on mobile devices. The project benchmarks **Menta**, our custom-trained mental health model based on Qwen3-4B (fine-tuned via LoRA), against baseline models including Microsoft's Phi-4-mini (3.8B) and Alibaba's Qwen3-4B-Instruct-2507. The benchmark evaluates model performance across 6 mental health classification tasks: stress detection, depression detection and severity classification, suicide ideation detection, suicide risk assessment, and multi-level risk severity classification. All inference runs entirely on-device using llama.cpp with Metal GPU acceleration, providing comprehensive metrics including accuracy, latency (TTFT), throughput (ITPS/OTPS), memory usage, and CPU utilization. This platform enables direct comparison between specialized fine-tuned models and general-purpose language models for mental health applications.
-# Huggingface checkpoint
-- **Menta.gguf**  - [Download Link](https://huggingface.co/mHealthAI/Menta)
+Menta is an optimized small language model for multi task mental health prediction from social media. It is trained with a LoRA based cross dataset regimen and a balanced accuracy oriented objective across six classification tasks. Compared with nine state of the art small language model baselines, Menta delivers an average improvement of 15.2 percent over the best SLM without fine tuning and it surpasses 13B parameter large language models on depression and stress while remaining about 3.25 times smaller. We also demonstrate real time on device inference on an iPhone 15 Pro Max that uses about 3 GB of RAM, enabling scalable and privacy preserving mental health monitoring.
+# Huggingface checkpoint-[Download Link](https://huggingface.co/mHealthAI/Menta)
 ## Features
 
 - **On-Device AI Inference**: Run state-of-the-art language models entirely on your iOS device
