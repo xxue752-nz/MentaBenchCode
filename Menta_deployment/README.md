@@ -226,22 +226,6 @@ All datasets are included in the app bundle:
 - **SDCNL**: Suicide ideation detection
 - **Reddit User Posts**: Multi-level suicide risk assessment
 
-## Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@software{menta2025,
-  title={Menta: Mental Health AI Model Evaluation on iOS},
-  author={Your Name},
-  year={2025},
-  url={https://github.com/yourusername/Menta}
-}
-```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
@@ -249,15 +233,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Uses models from Alibaba (Qwen), Microsoft (Phi), Stability AI, and TII (Falcon)
 - Mental health datasets from various research projects
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues for:
-- Bug fixes
-- New features
-- Additional models
-- Performance improvements
-- Documentation enhancements
-
-## Disclaimer
-
-This application is for research and benchmarking purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of qualified health providers with any questions regarding mental health conditions.
