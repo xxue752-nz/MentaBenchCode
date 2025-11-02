@@ -157,27 +157,6 @@ The system is optimized for mobile devices with:
 - **Techniques**: LoRA fine-tuning, multi-task learning
 - **Base Models**: Small Language Models (SLMs)
 
-## Citation
-
-If you use Menta in your research, please cite:
-
-```bibtex
-@software{menta2024,
-  title={Menta: On-Device Mental Health Monitoring with Small Language Models},
-  author={Your Team},
-  year={2024},
-  url={https://github.com/xxue752-nz/Menta}
-}
-```
-
-## License
-
-This project is licensed under the terms specified in the [LICENSE](./LICENSE) file.
-
-## Contributing
-
-Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
-
 
 
 
