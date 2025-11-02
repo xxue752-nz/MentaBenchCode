@@ -261,35 +261,3 @@ config.batch_size = 2
 training_args.gradient_checkpointing = True
 ```
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Qwen3-4B-Instruct-2507 model by Alibaba Cloud
-- Hugging Face Transformers library
-- PEFT library for parameter-efficient fine-tuning
-- Mental health datasets used in this research
-
-## References
-
-- [Qwen3 Model Documentation](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507)
-- [LoRA: Low-Rank Adaptation](https://arxiv.org/abs/2106.09685)
-- [PEFT Library](https://github.com/huggingface/peft)
-
-## Support
-
-For questions and support, please open an issue on GitHub or contact the maintainers.
-
----
-
-**Note**: This framework is designed for research purposes. Please ensure compliance with data privacy regulations and ethical guidelines when working with mental health data.
