@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Menta Workflow](images/workflow.png)
+![Menta Workflow](images/workflow.jpg)
 
 **Privacy-Preserving Mental Health Assessment Using Small Language Models on Mobile Devices**
 
