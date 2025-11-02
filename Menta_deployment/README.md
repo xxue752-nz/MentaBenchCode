@@ -261,11 +261,3 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 ## Disclaimer
 
 This application is for research and benchmarking purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of qualified health providers with any questions regarding mental health conditions.
-
-## Contact
-
-For questions or feedback, please open an issue on GitHub or contact [your email].
-
----
-
-**Note**: This is a research project focused on evaluating AI model performance for mental health tasks on mobile devices. The models and evaluations are intended for academic and research purposes.
