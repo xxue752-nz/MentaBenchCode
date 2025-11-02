@@ -1,4 +1,4 @@
-# Qwen3-4B Mental Health Multi-Task Fine-tuning
+# Menta pretraining
 
 Fine-tune Qwen3-4B-Instruct-2507 on 6 mental health classification tasks using LoRA and log-probability evaluation.
 
