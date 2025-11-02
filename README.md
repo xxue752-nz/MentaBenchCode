@@ -20,7 +20,7 @@ Menta is an optimized small language model fine-tuned for multi-task mental-heal
 -**Real-Time Monitoring**: Provides immediate in-situ predictions
 - **High Accuracy**: Fine-tuned SLMs for mental health assessment tasks
 
-## 🗂️ Project Structure
+##Project Structure
 
 This repository contains two main components:
 
@@ -71,7 +71,7 @@ This folder contains all the code and datasets for training and fine-tuning the 
 - Weighted loss functions for balanced learning
 - Log probability analysis for confidence estimation
 
-## 🚀 Quick Start
+##Quick Start
 
 ### For Model Deployment (iOS)
 
@@ -128,14 +128,14 @@ The Menta system follows a comprehensive workflow:
    - Confidence scores
 5. **Log Saving**: Records metadata, system logs, and resource usage for performance monitoring
 
-## 🛡️ Privacy & Security
+## Privacy & Security
 
 - **100% On-Device Processing**: No data transmitted to external servers
 - **Data Minimization**: Only essential data is temporarily cached locally
 - **No Cloud Storage**: All processing and storage occurs on the user's device
 - **Privacy by Design**: Built with privacy as the core principle
 
-## 📊 Performance
+## Performance
 
 The system is optimized for mobile devices with:
 - Efficient CPU and RAM usage
@@ -143,7 +143,7 @@ The system is optimized for mobile devices with:
 - Fast inference times
 - Real-time prediction capabilities
 
-## 🔧 Technical Stack
+## Technical Stack
 
 ### Deployment
 - **Language**: Swift, SwiftUI
@@ -157,7 +157,7 @@ The system is optimized for mobile devices with:
 - **Techniques**: LoRA fine-tuning, multi-task learning
 - **Base Models**: Small Language Models (SLMs)
 
-## 📝 Citation
+## Citation
 
 If you use Menta in your research, please cite:
 
@@ -170,15 +170,15 @@ If you use Menta in your research, please cite:
 }
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the terms specified in the [LICENSE](./LICENSE) file.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 Menta is a research tool and should not be used as a substitute for professional mental health diagnosis or treatment. If you or someone you know is experiencing mental health issues or suicidal thoughts, please contact a mental health professional or crisis helpline immediately.
 
