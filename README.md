@@ -178,22 +178,6 @@ This project is licensed under the terms specified in the [LICENSE](./LICENSE) f
 
 Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
-## Disclaimer
 
-Menta is a research tool and should not be used as a substitute for professional mental health diagnosis or treatment. If you or someone you know is experiencing mental health issues or suicidal thoughts, please contact a mental health professional or crisis helpline immediately.
 
-**Crisis Resources:**
-- National Suicide Prevention Lifeline (US): 1-800-273-8255
-- Crisis Text Line (US): Text HOME to 741741
-- International Association for Suicide Prevention: https://www.iasp.info/resources/Crisis_Centres/
-
-## 📧 Contact
-
-For questions, issues, or collaborations, please open an issue on GitHub or contact the maintainers.
-
----
-
-<div align="center">
-Made with ❤️ for mental health awareness and privacy-preserving AI
-</div>
 
