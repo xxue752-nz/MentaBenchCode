@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Menta Workflow](images/workflow.jpg)
+<img src="images/workflow.jpg" alt="Menta Workflow" width="100%">
 
 **Privacy-Preserving Mental Health Assessment Using Small Language Models on Mobile Devices**
 
