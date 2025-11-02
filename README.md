@@ -110,7 +110,7 @@ python Menta_lora_multitask_weighted_optimized.py
 
 For detailed training instructions, see [`Menta_pretraining_code/README.md`](./Menta_pretraining_code/README.md)
 
-## 🔬 How It Works
+## How It Works
 
 The Menta system follows a comprehensive workflow:
 
