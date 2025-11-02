@@ -131,7 +131,7 @@ The Menta system follows a comprehensive workflow:
 
 ## Privacy & Security
 
-- **100% On-Device Processing**: No data transmitted to external servers
+- **Full On-Device Processing**: No data transmitted to external servers
 - **Data Minimization**: Only essential data is temporarily cached locally
 - **No Cloud Storage**: All processing and storage occurs on the user's device
 - **Privacy by Design**: Built with privacy as the core principle
