@@ -10,7 +10,31 @@
 
 ## Overview
 
-Menta is an optimized small language model for multi task mental health prediction from social media. It is trained with a LoRA based cross dataset regimen and a balanced accuracy oriented objective across six classification tasks. Compared with nine state of the art small language model baselines, Menta delivers an average improvement of 15.2 percent over the best SLM without fine tuning and it surpasses 13B parameter large language models on depression and stress while remaining about 3.25 times smaller. We also demonstrate real time on device inference on an iPhone 15 Pro Max that uses about 3 GB of RAM, enabling scalable and privacy preserving mental health monitoring.
+Mental health conditions affect hundreds of millions of people worldwide, yet scalable and privacy-preserving early detection
+          remains limited. While large language models (LLMs) have demonstrated strong performance in mental health prediction, their com-
+          putational cost and deployment constraints hinder practical use on personal devices. Small language models (SLMs) offer a promising
+          alternative, but the lack of standardized benchmarks has limited systematic evaluation of their effectiveness for social media–based
+          mental health prediction. In this work, we introduce MentaBench, a unified benchmark for multi-task mental health prediction from
+          social media text, covering six classification tasks spanning depression, stress, and suicidality. The benchmark evaluates model
+          accuracy, robustness across datasets, and on-device deployability, enabling fair comparison between SLMs and LLMs. As a refer-
+          ence system, we present Menta, an optimized SLM trained using a LoRA-based multi-task framework with balanced accuracy–oriented
+          objectives. Across nine state-of-the-art SLMs and multiple LLM baselines, Menta achieves an average improvement of 15.2% over
+          non–fine-tuned SLMs and outperforms 13B-parameter LLMs on several tasks while being approximately 3.25× smaller. We further
+          demonstrate real-time, on-device inference on an iPhone 15 Pro Max using approximately 3GB of memory. By providing evaluations
+          among baseline models, MentaBench introduces reproducible comparison and highlights the potential of SLMs for scalable, privacy-
+          preserving mental health monitoring.Mental health conditions affect hundreds of millions of people worldwide, yet scalable and privacy-preserving early detection
+          remains limited. While large language models (LLMs) have demonstrated strong performance in mental health prediction, their com-
+          putational cost and deployment constraints hinder practical use on personal devices. Small language models (SLMs) offer a promising
+          alternative, but the lack of standardized benchmarks has limited systematic evaluation of their effectiveness for social media–based
+          mental health prediction. In this work, we introduce MentaBench, a unified benchmark for multi-task mental health prediction from
+          social media text, covering six classification tasks spanning depression, stress, and suicidality. The benchmark evaluates model
+          accuracy, robustness across datasets, and on-device deployability, enabling fair comparison between SLMs and LLMs. As a refer-
+          ence system, we present Menta, an optimized SLM trained using a LoRA-based multi-task framework with balanced accuracy–oriented
+          objectives. Across nine state-of-the-art SLMs and multiple LLM baselines, Menta achieves an average improvement of 15.2% over
+          non–fine-tuned SLMs and outperforms 13B-parameter LLMs on several tasks while being approximately 3.25× smaller. We further
+          demonstrate real-time, on-device inference on an iPhone 15 Pro Max using approximately 3GB of memory. By providing evaluations
+          among baseline models, MentaBench introduces reproducible comparison and highlights the potential of SLMs for scalable, privacy-
+          preserving mental health monitoring.
 ## For more detailed deployment instructions, see [`Menta_deployment/`](./Menta_deployment)
 ## For more detailed training instructions, see [`Menta_pretraining_code/`](./Menta_pretraining_code)
 ### Key Features
