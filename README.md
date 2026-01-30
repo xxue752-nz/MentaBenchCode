@@ -1,4 +1,4 @@
-# Menta: A Small Language Model for On-Device Mental Health Prediction
+# MentaBench: A Multi-Task Benchmark for Mobile Mental Health Prediction with Small Language Models on Social Media Posts
 
 <div align="center">
 
